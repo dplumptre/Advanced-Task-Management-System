@@ -53,6 +53,12 @@ DB_PORT=3306
 DB_DATABASE=tms
 DB_USERNAME=xxxxxxx
 DB_PASSWORD=xxxxxxx
+QUEUE_CONNECTION=database
+```
+
+Create Queue Table
+```bash
+php artisan queue:table
 ```
 
 Install dependencies
