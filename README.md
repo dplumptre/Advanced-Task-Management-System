@@ -24,9 +24,10 @@ The Task Management System is designed to allow users to effectively manage thei
 
 ## Requirements
 
+-   Must have installed composer on your machine
 -   PHP 8.3 or higher
 -   Laravel 12 or higher
--   you can use the laravel doc for more info  [here](https://laravel.com/docs/12.x)
+-   you can check the laravel doc for more installation info  [here](https://laravel.com/docs/12.x)
 
 
 
@@ -43,10 +44,10 @@ Go to the project directory
 ```bash
   cd tms
 ```
-Create .env file and update these variables
+Create .env file by copying and updating the .env.example. Then make sure you update these variables to your specification
 
 ```bash
-APP_URL=http://localhost  
+APP_URL=http://tms.test  
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306

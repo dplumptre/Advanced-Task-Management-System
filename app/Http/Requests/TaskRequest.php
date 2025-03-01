@@ -23,7 +23,7 @@ class TaskRequest extends FormRequest
     {
         return [
             'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
+            'description' => 'required|string',
             'due_date' => 'required|date',
             'priority' => 'required|in:Low,Medium,High',
             'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
@@ -33,9 +33,10 @@ class TaskRequest extends FormRequest
     public function messages()
     {
         return [
-            'title.required' => 'The task title is required.',
-            'due_date.required' => 'The due date is required.',
-            'priority.required' => 'The priority level is required.',
+            'title.required' => 'Title is required.',
+            'description.required' => 'Description is required.',
+            'due_date.required' => 'Due date is required.',
+            'priority.required' => 'Priority level is required.',
         ];
     }
 }
