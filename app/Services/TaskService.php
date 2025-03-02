@@ -35,10 +35,12 @@ class TaskService
     {
         try {
             $task = Task::findOrFail($id);
+            Log::info("data ",$data);
             if (isset($data['image']) && $data['image'] instanceof UploadedFile) {
                 $this->deleteTaskImage($task);
+                $data['image_url'] = $this->uploadImage($data['image']);
             }
-            $data['image_url'] = $this->uploadImage($data['image']);
+
             $task->update($data);
             return $task;
         } catch (Exception $e) {

@@ -21,7 +21,7 @@ class TaskController extends Controller
 
     public function index()
     {
-        $tasks = Task::all();
+        $tasks = Task::query()->latest()->get();
         return ApiResponse::success($tasks);
     }
 
