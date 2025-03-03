@@ -91,7 +91,7 @@ Create a symbolic link for uploaded files
 Start the app depending on your setup
 
 ```bash
-  php artisan serve or http://tms.test
+  php artisan serve or http://tms.test or http://advanced-task-management-system.test
 ```
 Make sure queue is running 
 ```bash
