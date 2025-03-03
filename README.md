@@ -82,5 +82,6 @@ Start the app depending on your setup
 ```
 Make sure queue is running 
 ```bash
+php artisan queue:flush
  php artisan queue:work
 ```
