@@ -66,11 +66,21 @@ Install dependencies
   composer install
 
 ```
-Create Queue Table
+
+Generate the application key
+```bash
+php artisan key:generate
+```
+
+
+Run the following commands
 ```bash
 php artisan queue:table
 php artisan migrate
 ```
+
+
+
 
 
 Create a symbolic link for uploaded files
