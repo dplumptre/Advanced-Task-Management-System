@@ -80,3 +80,7 @@ Start the app depending on your setup
 ```bash
   php artisan serve or http://tms.test
 ```
+Make sure queue is running 
+```bash
+ php artisan queue:work
+```
