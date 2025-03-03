@@ -43,12 +43,12 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd tms
+  cd Advanced-Task-Management-System
 ```
 Create .env file by copying and updating the .env.example. Then make sure you update these variables to your specification
 
 ```bash
-APP_URL=http://tms.test  
+APP_URL=http://tms.test  <--this should be your url yours might be http://Advanced-Task-Management-System.test depending on your setup
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -58,17 +58,19 @@ DB_PASSWORD=xxxxxxx
 QUEUE_CONNECTION=database
 ```
 
-Create Queue Table
-```bash
-php artisan queue:table
-```
 
 Install dependencies
 
 ```bash
   composer install
-  php artisan migrate
+
 ```
+Create Queue Table
+```bash
+php artisan queue:table
+php artisan migrate
+```
+
 
 Create a symbolic link for uploaded files
 ```bash
@@ -83,5 +85,5 @@ Start the app depending on your setup
 Make sure queue is running 
 ```bash
 php artisan queue:flush
- php artisan queue:work
+php artisan queue:work
 ```
