@@ -28,6 +28,10 @@ class ExcelUploadService
 
             Log::info('Processing row ' . ($index + 1), $row);
 
+            if (isset($row['due_date']) && is_numeric($row['due_date'])) {
+                $row['due_date'] = Carbon::instance(Date::excelToDateTimeObject($row['due_date']))->format('Y-m-d');
+            }
+
             $validationResult = $this->validator->validate($row);
 
             if ($validationResult['valid']) {
@@ -67,14 +71,10 @@ class ExcelUploadService
 
     private function mapRowToTaskData(array $row): array
     {
-
-        $date = Carbon::instance(Date::excelToDateTimeObject($row['due_date']));
-        $due_date = $date->format('Y-m-d');
-
         return [
             'title' => $row['title'] ?? null,
             'description' => $row['description'] ?? null,
-            'due_date' =>  $due_date ?? null,
+            'due_date' =>  $row['due_date'] ?? null,
             'priority' => $row['priority'] ?? null,
         ];
     }
