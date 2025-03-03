@@ -98,3 +98,8 @@ Make sure queue is running
 php artisan queue:flush
 php artisan queue:work
 ```
+<img width="746" alt="Screenshot 2025-03-03 at 12 16 16" src="https://github.com/user-attachments/assets/da80b6cd-1269-439a-af9e-57d36ba679be" />
+
+
+
+
