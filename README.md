@@ -45,7 +45,8 @@ Go to the project directory
 ```bash
   cd Advanced-Task-Management-System
 ```
-Create .env file by copying and updating the .env.example. Then make sure you update these variables to your specification
+Create .env file by copying and updating the .env.example. Then make sure you update these variables to your specification.
+Make sure you have created the db 'tms'
 
 ```bash
 APP_URL=http://tms.test  <--this should be your url yours might be http://Advanced-Task-Management-System.test depending on your setup
